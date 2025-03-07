@@ -1,6 +1,6 @@
 const ResumePage = () => {
   return (
-    <div className={'flex h-dvh flex-col items-center justify-center'}>
+    <div className={'flex h-dvh w-full flex-col items-center justify-center'}>
       <h1 className={'text-5xl'}>
         <span className={'decoration-highlight underline underline-offset-4'}>
           차곡차곡

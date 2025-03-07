@@ -28,7 +28,7 @@ export async function generateMetadata({
 }: {
   params: { slug: string }
 }) {
-  const { slug } = await params
+  const { slug } = params
   const { frontmatter } = await getPostData(slug)
 
   return {
@@ -54,7 +54,7 @@ export async function generateMetadata({
 
 // ✅ `Page` 컴포넌트에서 동일한 데이터 재사용
 export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = await params
+  const { slug } = params
   const { content } = await getPostData(slug)
 
   return (
