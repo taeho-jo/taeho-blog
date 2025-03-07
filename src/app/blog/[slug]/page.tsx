@@ -2,6 +2,8 @@ import fs from 'fs/promises'
 import path from 'path'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import { getPostSlug } from '@/lib/getPostSlug'
+import SubNavbar from '@/components/SubNavbar'
+import formatDate from '@/utils/formatDate'
 
 // ✅ 중복 없이 MDX 데이터를 불러오는 함수
 async function getPostData(slug: string) {
@@ -26,9 +28,9 @@ async function getPostData(slug: string) {
 export async function generateMetadata({
   params
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
-  const { slug } = params
+  const { slug } = await params
   const { frontmatter } = await getPostData(slug)
 
   return {
@@ -53,14 +55,23 @@ export async function generateMetadata({
 }
 
 // ✅ `Page` 컴포넌트에서 동일한 데이터 재사용
-export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params
-  const { content } = await getPostData(slug)
+export default async function Page({
+  params
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+  const { content, frontmatter } = await getPostData(slug)
 
   return (
-    <>
-      <div>{content}</div>
-    </>
+    <div className={'pt-24 md:pt-40'}>
+      <SubNavbar
+        title={frontmatter.title}
+        subTitle={`by 조태호 | ${formatDate(frontmatter.publishDate)}`}
+      />
+
+      <div className={'prose dark:prose-invert'}>{content}</div>
+    </div>
   )
 }
 

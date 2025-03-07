@@ -1,13 +1,22 @@
+import SubNavbar from '@/components/SubNavbar'
+
 const ResumePage = () => {
   return (
-    <div className={'flex h-dvh w-full flex-col items-center justify-center'}>
-      <h1 className={'text-5xl'}>
+    <div className={'pt-24 md:pt-40'}>
+      <SubNavbar
+        title={'차곡차곡'}
+        subTitle={'경험과 배움을 쌓아온 여정을 기록하는'}
+      />
+      <p
+        className={
+          'break-keep text-4xl leading-relaxed tracking-wide md:leading-loose'
+        }>
         <span className={'decoration-highlight underline underline-offset-4'}>
           차곡차곡
         </span>
         {''}
         &nbsp; 현재 준비 중 🫥
-      </h1>
+      </p>
     </div>
   )
 }

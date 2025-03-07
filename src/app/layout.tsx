@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Noto_Sans_KR, Gowun_Batang } from 'next/font/google'
 import '../styles/globals.css'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
-// import Navbar from '@/components/Navbar'
 
 const notoSansFont = Noto_Sans_KR({
   subsets: ['latin'],
@@ -65,7 +64,16 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem>
           {/*<Navbar />*/}
-          {children}
+          <div className="flex h-dvh w-full flex-col items-center justify-center">
+            <main className="h-dvh w-full max-w-screen-sm px-4 md:px-0">
+              {children}
+            </main>
+            {/*TODO: 푸터 작업*/}
+            {/*<footer*/}
+            {/*  className={'w-full max-w-screen-sm border-4 border-amber-500'}>*/}
+            {/*  푸터*/}
+            {/*</footer>*/}
+          </div>
         </ThemeProvider>
       </body>
     </html>

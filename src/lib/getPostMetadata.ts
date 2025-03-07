@@ -8,7 +8,7 @@ export async function getMdxMetadata() {
 
   const files = fs.readdirSync(contentDir)
 
-  return await Promise.all(
+  const metadataList = await Promise.all(
     files.map(async filename => {
       const filePath = path.join(contentDir, filename)
       const fileContent = fs.readFileSync(filePath, 'utf8')
@@ -23,5 +23,9 @@ export async function getMdxMetadata() {
         ...frontmatter // frontmatter에서 메타데이터 가져오기
       }
     })
+  )
+  return metadataList.sort(
+    (a, b) =>
+      new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
   )
 }

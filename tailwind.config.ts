@@ -11,6 +11,8 @@ export default {
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        box: 'hsl(var(--box)',
+        line: 'hsl(var(--line)',
         highlight: 'var(--highlight)',
         'highlight-foreground': 'var(--highlight-foreground)',
         card: {
@@ -42,6 +44,7 @@ export default {
           foreground: 'hsl(var(--destructive-foreground))'
         },
         border: 'hsl(var(--border))',
+        // border: 'hsl(var(--highlight))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         chart: {

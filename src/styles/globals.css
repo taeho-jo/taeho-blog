@@ -37,6 +37,8 @@ body {
     --radius: 0.5rem;
     --highlight: #D19C97;
     --highlight-foreground: #5C4450;
+    --line: #D1D5DB;
+    --box: #E5E7EB;
   }
   .dark {
     --background: #111827;
@@ -65,6 +67,8 @@ body {
     --chart-5: 340 75% 55%;
     --highlight: #D19C97;
     --highlight-foreground: #5C4450;
+    --line: #374151;
+    --box: #1E293B;
   }
 }
 
