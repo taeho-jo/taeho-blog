@@ -1,8 +1,7 @@
-import { getPostSlug } from '@/lib/getPostSlug'
-import { getMdxMetadata } from '@/lib/getPostMetadata'
 import fs from 'fs'
 import path from 'path'
 import { compileMDX } from 'next-mdx-remote/rsc'
+import { getPostSlug } from '@/lib/getPostSlug'
 import { BlogMetadataType } from '@/types'
 
 export default async function Page({
@@ -23,7 +22,11 @@ export default async function Page({
 
   // const { default: Post } = await import(`@/content/${slug}.mdx`)
   // return <Post />
-  return <div>{content} 123</div>
+  return (
+    <>
+      <div>{content} 123</div>
+    </>
+  )
 }
 
 export async function generateStaticParams() {

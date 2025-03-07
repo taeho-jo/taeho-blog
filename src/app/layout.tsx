@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Noto_Sans_KR, Gowun_Batang } from 'next/font/google'
 import '../styles/globals.css'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
-import Navbar from '@/components/Navbar'
+// import Navbar from '@/components/Navbar'
 
 const notoSansFont = Noto_Sans_KR({
   subsets: ['latin'],
@@ -27,12 +27,12 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${gowonFont.className} ${notoSansFont.className} antialiased`}>
+        className={`h-dvh w-full ${gowonFont.className} ${notoSansFont.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem>
-          <Navbar />
+          {/*<Navbar />*/}
           {children}
         </ThemeProvider>
       </body>
