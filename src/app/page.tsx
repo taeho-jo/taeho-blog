@@ -4,14 +4,11 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <div className="flex h-dvh w-full flex-col items-center justify-center">
-      {/*<header className={'w-full max-w-screen-sm border-4 border-amber-500'}>*/}
-      {/*  헤더*/}
-      {/*</header>*/}
       <main className="p h-dvh w-full max-w-screen-sm px-4 md:px-0">
         <div className={'pt-24 md:pt-40'}>
           <div className={'flex flex-wrap items-center justify-between'}>
             <h1>
-              조태호&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;Jotang 🙃
+              조각조각&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;조태호 🙃
             </h1>
             <Navbar />
           </div>
@@ -38,7 +35,7 @@ export default function Home() {
           {/*</section>*/}
 
           <section className={''}>
-            <div className={'mb-1'}>
+            <div className={'mb-3'}>
               <Link
                 href="/blog"
                 className={
@@ -50,7 +47,7 @@ export default function Home() {
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;공부하면서 배운 것들을 남겨두는 곳
               </span>
             </div>
-            <div className={'mb-1'}>
+            <div className={'mb-3'}>
               <Link
                 href="/projects"
                 className={
@@ -62,7 +59,7 @@ export default function Home() {
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개발하며 만든 것들을 모아 놓은 곳
               </span>
             </div>
-            <div className={'mb-1'}>
+            <div className={'mb-3'}>
               <Link
                 href="/resume"
                 className={

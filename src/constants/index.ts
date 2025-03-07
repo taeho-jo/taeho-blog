@@ -2,7 +2,7 @@
 
 const CONSTANTS = {
   NAME: '조태호',
-  BASE_PATH: '/content'
+  BASE_PATH: 'src/contents'
 }
 
 export default CONSTANTS

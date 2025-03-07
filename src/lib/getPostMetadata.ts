@@ -4,7 +4,7 @@ import { compileMDX } from 'next-mdx-remote/rsc'
 import { BlogMetadataType } from '@/types'
 
 export async function getMdxMetadata() {
-  const contentDir = path.join(process.cwd(), 'src/content/')
+  const contentDir = path.join(process.cwd(), 'src/contents/')
 
   const files = fs.readdirSync(contentDir)
 

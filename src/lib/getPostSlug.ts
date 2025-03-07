@@ -1,7 +1,8 @@
 import { sync } from 'glob'
 import path from 'path'
+import CONSTANTS from '@/constants'
 
-const BASE_PATH = 'src/content'
+const BASE_PATH = CONSTANTS.BASE_PATH
 const POSTS_PATH = path.join(process.cwd(), BASE_PATH)
 
 export const getPostSlug = async () => {

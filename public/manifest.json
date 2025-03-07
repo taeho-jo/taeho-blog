@@ -1,0 +1,31 @@
+{
+ "name": "조각조각",
+ "short_name": "조각조각",
+ "description": "개발과 작업물을 기록하고, 쌓아가며 성장의 흔적을 남기는 공간",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#111827",
+ "theme_color": "#D19C97",
+ "icons": [
+  {
+   "src": "/android-icon-192x192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/android-icon-144x144.png",
+   "sizes": "144x144",
+   "type": "image/png"
+  },
+  {
+   "src": "/apple-icon-180x180.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  },
+  {
+   "src": "/ms-icon-310x310.png",
+   "sizes": "310x310",
+   "type": "image/png"
+  }
+ ]
+}
