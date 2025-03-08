@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Noto_Sans_KR, Gowun_Batang } from 'next/font/google'
 import '../styles/globals.css'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
@@ -48,6 +48,16 @@ export const metadata: Metadata = {
   //     '조각조각은 개발과 작업물을 기록하고, 쌓아가며 성장의 흔적을 남기는 공간! 부담 없이 들러서 개발자의 여정을 보고 가세요!',
   //   images: ['/jogakjogak.png']
   // }
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#F8F9FA' },
+    { media: '(prefers-color-scheme: dark)', color: '#111827' }
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover' // 노치 영역을 고려한 설정
 }
 
 export default function RootLayout({
