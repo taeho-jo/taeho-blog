@@ -4,6 +4,11 @@ import { compileMDX } from 'next-mdx-remote/rsc'
 import { getPostSlug } from '@/lib/getPostSlug'
 import SubNavbar from '@/components/SubNavbar'
 import formatDate from '@/utils/formatDate'
+import Image from 'next/image'
+import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
+import rehypePrism from 'rehype-prism-plus'
+import rehypeCodeTitles from 'rehype-code-titles'
 
 // ✅ 중복 없이 MDX 데이터를 불러오는 함수
 async function getPostData(slug: string) {
@@ -18,7 +23,14 @@ async function getPostData(slug: string) {
     imgUrl: string
   }>({
     source: fileContent,
-    options: { parseFrontmatter: true }
+    options: {
+      parseFrontmatter: true,
+      mdxOptions: {
+        remarkPlugins: [remarkGfm, remarkMath],
+        rehypePlugins: [rehypeCodeTitles, rehypePrism], // ⭐ 여기에 꼭 넣어야 함
+        format: 'mdx'
+      }
+    }
   })
 
   return { content, frontmatter }
@@ -62,6 +74,7 @@ export default async function Page({
 }) {
   const { slug } = await params
   const { content, frontmatter } = await getPostData(slug)
+  // const mdxSource = await parseMDX(fileContent)
 
   return (
     <div className={'pt-24 md:pt-40'}>
@@ -70,7 +83,22 @@ export default async function Page({
         subTitle={`by 조태호 | ${formatDate(frontmatter.publishDate)}`}
       />
 
+      <div className="relative mb-14 h-64 w-full sm:h-96">
+        <Image
+          src={frontmatter.imgUrl}
+          alt={`${frontmatter.title} 포스터 이미지`}
+          fill
+          placeholder="blur"
+          blurDataURL={frontmatter.title}
+          className="object-cover"
+        />
+      </div>
+
       <div className={'prose dark:prose-invert'}>{content}</div>
+      {/*<div className={'prose dark:prose-invert'}>*/}
+      {/*  <MDXRemote>{...mdxSource}</MDXRemote>*/}
+      {/*  /!*{content}*!/*/}
+      {/*</div>*/}
     </div>
   )
 }

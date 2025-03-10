@@ -1,6 +1,7 @@
 'use client'
 import Navbar from '@/components/Navbar'
 import Link from 'next/link'
+import { Link as LinkIcon } from 'lucide-react'
 
 const SubNavbar = ({
   title,
@@ -22,44 +23,66 @@ const SubNavbar = ({
         <Navbar />
       </div>
 
-      <div className={'mb-24'}>
-        <Link
-          href={'/'}
+      <div className={'mb-24 flex items-center justify-start'}>
+        <div
           className={
-            'hover:text-highlight mr-4 text-xs transition-all duration-300'
+            'flex items-center justify-start transition-all duration-300 hover:text-highlight'
           }>
-          조각조각
-        </Link>
-
-        {title !== '깨작깨작' && (
+          <LinkIcon size={10} />
           <Link
-            href={'/blog'}
-            className={
-              'hover:text-highlight mr-4 text-xs transition-all duration-300'
-            }>
-            깨작깨작
+            href={'/'}
+            className={'mr-4 text-xs'}>
+            조각조각
           </Link>
-        )}
+        </div>
 
-        {title !== '뚝딱뚝딱' && (
-          <Link
-            href={'/projects'}
-            className={
-              'hover:text-highlight mr-4 text-xs transition-all duration-300'
-            }>
-            뚝딱뚝딱
-          </Link>
-        )}
+        <div
+          className={
+            'flex items-center justify-start transition-all duration-300 hover:text-highlight'
+          }>
+          {title !== '깨작깨작' && (
+            <>
+              <LinkIcon size={10} />
+              <Link
+                href={'/blog'}
+                className={'mr-4 text-xs'}>
+                깨작깨작
+              </Link>
+            </>
+          )}
+        </div>
 
-        {title !== '차곡차곡' && (
-          <Link
-            href={'/resume'}
-            className={
-              'hover:text-highlight mr-4 text-xs transition-all duration-300'
-            }>
-            차곡차곡
-          </Link>
-        )}
+        <div
+          className={
+            'flex items-center justify-start transition-all duration-300 hover:text-highlight'
+          }>
+          {title !== '뚝딱뚝딱' && (
+            <>
+              <LinkIcon size={10} />
+              <Link
+                href={'/projects'}
+                className={'mr-4 text-xs'}>
+                뚝딱뚝딱
+              </Link>
+            </>
+          )}
+        </div>
+
+        <div
+          className={
+            'flex items-center justify-start transition-all duration-300 hover:text-highlight'
+          }>
+          {title !== '차곡차곡' && (
+            <>
+              <LinkIcon size={10} />
+              <Link
+                href={'/resume'}
+                className={'mr-4 text-xs'}>
+                차곡차곡
+              </Link>
+            </>
+          )}
+        </div>
       </div>
     </>
   )

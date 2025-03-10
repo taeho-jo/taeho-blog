@@ -1,0 +1,55 @@
+.token.property,
+.token.operator,
+.token.combinator {
+  color: #a1a1aa;
+}
+
+.code-highlight {
+  float: left;
+  min-width: 100%;
+}
+
+.code-line {
+  display: block;
+  padding-left: 10px;
+  padding-right: 14px;
+  margin-left: -16px;
+  margin-right: -16px;
+  border-left: 4px solid rgba(0, 0, 0, 0);
+  line-height: 1.5rem;
+}
+
+.code-line.inserted {
+  background-color: #064e3b;
+}
+
+.code-line.deleted {
+  background-color: #7f1d1d;
+}
+
+.highlight-line {
+  margin-left: -14px;
+  margin-right: -16px;
+  background-color: #27272a;
+  border-left: 2px solid #fbbf24;
+  display: block !important;
+  border-radius: 0 !important;
+}
+
+.line-number::before {
+  display: inline-block;
+  width: 1rem;
+  text-align: right;
+  margin-right: 16px;
+  margin-left: -8px;
+  color: #71717a;
+  content: attr(line);
+}
+
+.code-line.inserted {
+  background-color: #064e3b;
+}
+
+.code-line.deleted {
+  background-color: #7f1d1d;
+}

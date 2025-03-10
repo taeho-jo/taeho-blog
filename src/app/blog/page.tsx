@@ -16,17 +16,17 @@ const BlogList = () => {
       {allBlogData.map(blogData => (
         <article
           key={blogData.slug}
-          className="group my-8 transition-all duration-300 ease-out hover:opacity-100">
+          className="group pb-8 transition-all duration-300 ease-out">
           <Link
             href={`/blog/${blogData.slug}`}
             className="flex flex-wrap items-center justify-between">
             {/* 제목 */}
-            <h3 className="group-hover:text-highlight decoration-highlight transition-all duration-200 group-hover:scale-110 group-hover:underline group-hover:underline-offset-4">
+            <h3 className="text-base transition-all duration-200 sm:group-hover:scale-110 sm:group-hover:text-highlight sm:group-hover:underline sm:group-hover:underline-offset-4">
               {blogData.title}
             </h3>
 
             {/* 날짜 */}
-            <p className="group-hover:text-highlight decoration-highlight text-xs transition-all duration-200 group-hover:underline group-hover:underline-offset-4">
+            <p className="text-xs transition-all duration-200 sm:group-hover:text-highlight sm:group-hover:underline sm:group-hover:underline-offset-4">
               {formatDate(blogData.publishDate)}
             </p>
           </Link>

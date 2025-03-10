@@ -5,13 +5,13 @@ const ResumePage = () => {
     <div className={'pt-24 md:pt-40'}>
       <SubNavbar
         title={'차곡차곡'}
-        subTitle={'경험과 배움을 쌓아온 여정을 기록하는'}
+        subTitle={'경험과 배움을 쌓아온 여정을 기록하는 곳'}
       />
       <p
         className={
           'break-keep text-4xl leading-relaxed tracking-wide md:leading-loose'
         }>
-        <span className={'decoration-highlight underline underline-offset-4'}>
+        <span className={'underline decoration-highlight underline-offset-4'}>
           차곡차곡
         </span>
         {''}

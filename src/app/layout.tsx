@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Noto_Sans_KR, Gowun_Batang } from 'next/font/google'
 import '../styles/globals.css'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
+import Footer from '@/components/Footer'
 
 const notoSansFont = Noto_Sans_KR({
   subsets: ['latin'],
@@ -68,21 +69,19 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`h-dvh w-full ${gowonFont.className} ${notoSansFont.className} antialiased`}>
+        className={`min-h-screen w-full ${gowonFont.className} ${notoSansFont.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
+          disableTransitionOnChange
           enableSystem>
           {/*<Navbar />*/}
-          <div className="flex h-dvh w-full flex-col items-center justify-center">
-            <main className="h-dvh w-full max-w-screen-sm px-4 md:px-0">
+          <div className="flex min-h-screen w-full flex-col items-center">
+            <main className="w-full max-w-screen-sm flex-1 px-4 md:px-0">
               {children}
             </main>
-            {/*TODO: 푸터 작업*/}
-            {/*<footer*/}
-            {/*  className={'w-full max-w-screen-sm border-4 border-amber-500'}>*/}
-            {/*  푸터*/}
-            {/*</footer>*/}
+
+            <Footer />
           </div>
         </ThemeProvider>
       </body>
