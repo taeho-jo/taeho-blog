@@ -1,7 +1,7 @@
 'use client'
 
 import { useTheme } from 'next-themes'
-import { Moon, Sun, Laptop, Github } from 'lucide-react'
+import { Moon, Sun, Laptop } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function DarkModeToggle() {
