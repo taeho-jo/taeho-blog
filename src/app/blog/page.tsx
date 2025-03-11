@@ -7,7 +7,7 @@ const allBlogData = await getMdxMetadata()
 
 const BlogList = () => {
   return (
-    <div className={'pt-24 md:pt-40'}>
+    <>
       <SubNavbar
         title={'깨작깨작'}
         subTitle={'공부하면서 배운 것들을 남겨두는 곳'}
@@ -32,7 +32,7 @@ const BlogList = () => {
           </Link>
         </article>
       ))}
-    </div>
+    </>
   )
 }
 

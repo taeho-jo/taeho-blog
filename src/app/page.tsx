@@ -5,7 +5,7 @@ import BlogSocialComponent from '@/components/ui/BlogSocialComponent'
 
 export default function Home() {
   return (
-    <div className={'pt-24 md:pt-40'}>
+    <div className={''}>
       <BlogTitleComponent />
 
       <BlogIntroComponent />

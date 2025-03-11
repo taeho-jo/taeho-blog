@@ -2,7 +2,7 @@ import SubNavbar from '@/components/SubNavbar'
 
 const ResumePage = () => {
   return (
-    <div className={'pt-24 md:pt-40'}>
+    <>
       <SubNavbar
         title={'차곡차곡'}
         subTitle={'경험과 배움을 쌓아온 여정을 기록하는 곳'}
@@ -17,7 +17,7 @@ const ResumePage = () => {
         {''}
         &nbsp; 현재 준비 중 🫥
       </p>
-    </div>
+    </>
   )
 }
 

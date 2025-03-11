@@ -77,7 +77,7 @@ export default async function Page({
   // const mdxSource = await parseMDX(fileContent)
 
   return (
-    <div className={'pt-24 md:pt-40'}>
+    <>
       <SubNavbar
         title={frontmatter.title}
         subTitle={`by 조태호 | ${formatDate(frontmatter.publishDate)}`}
@@ -99,7 +99,7 @@ export default async function Page({
       {/*  <MDXRemote>{...mdxSource}</MDXRemote>*/}
       {/*  /!*{content}*!/*/}
       {/*</div>*/}
-    </div>
+    </>
   )
 }
 
