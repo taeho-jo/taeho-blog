@@ -70,7 +70,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`min-h-screen w-full min-w-[320px] ${gowonFont.className} ${notoSansFont.className} antialiased`}>
+        className={`min-h-[100svh] w-full min-w-[320px] ${gowonFont.className} ${notoSansFont.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -78,7 +78,7 @@ export default function RootLayout({
           enableSystem>
           {/*<Navbar />*/}
           <div className="flex min-h-screen w-full flex-col items-center">
-            <main className="w-full max-w-screen-sm flex-1 px-4 pt-4 md:px-0 md:pt-40">
+            <main className="w-full max-w-screen-sm flex-1 px-4 pt-24 md:px-0 md:pt-40">
               {children}
               <SpeedInsights />
             </main>
