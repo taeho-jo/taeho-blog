@@ -1,6 +1,6 @@
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/layout/Navbar'
 
-const BlogTitleComponent = () => {
+const TitleComponent = () => {
   return (
     <div className={'flex flex-wrap items-center justify-between'}>
       <h1>
@@ -11,4 +11,4 @@ const BlogTitleComponent = () => {
   )
 }
 
-export default BlogTitleComponent
+export default TitleComponent

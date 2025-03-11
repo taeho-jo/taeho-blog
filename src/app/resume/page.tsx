@@ -1,4 +1,4 @@
-import SubNavbar from '@/components/SubNavbar'
+import SubNavbar from '@/components/layout/SubNavbar'
 
 const ResumePage = () => {
   return (

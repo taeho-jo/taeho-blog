@@ -1,9 +1,8 @@
 import { sync } from 'glob'
 import path from 'path'
-import CONSTANTS from '@/constants'
+import { BASE_CONTENT_PATH } from '@/constants'
 
-const BASE_PATH = CONSTANTS.BASE_PATH
-const POSTS_PATH = path.join(process.cwd(), BASE_PATH)
+const POSTS_PATH = path.join(process.cwd(), BASE_CONTENT_PATH)
 
 export const getPostSlug = async () => {
   const postPaths: string[] = sync(`${POSTS_PATH}/**/*.mdx`)

@@ -1,5 +1,5 @@
 // src/components/Navbar.tsx
-import DarkModeToggle from '@/components/DarkModeToggle'
+import DarkModeToggle from '@/components/layout/DarkModeToggle'
 
 export default function Navbar() {
   return (

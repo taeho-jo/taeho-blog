@@ -1,18 +1,18 @@
-import BlogTitleComponent from '@/components/BlogTitleComponent'
-import BlogIntroComponent from '@/components/BlogIntroComponent'
-import BlogMenuComponent from '@/components/BlogMenuComponent'
-import BlogSocialComponent from '@/components/ui/BlogSocialComponent'
+import TitleComponent from '@/components/home/TitleComponent'
+import IntroComponent from '@/components/home/IntroComponent'
+import SocialLinkComponent from '@/components/home/SocialLinkComponent'
+import MenuComponent from '@/components/home/MenuComponent'
 
 export default function Home() {
   return (
     <div className={''}>
-      <BlogTitleComponent />
+      <TitleComponent />
 
-      <BlogIntroComponent />
+      <IntroComponent />
 
-      <BlogSocialComponent />
+      <SocialLinkComponent />
 
-      <BlogMenuComponent />
+      <MenuComponent />
     </div>
   )
 }

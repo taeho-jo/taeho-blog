@@ -1,4 +1,4 @@
-const BlogIntroComponent = () => {
+const IntroComponent = () => {
   return (
     <section
       className={
@@ -17,4 +17,4 @@ const BlogIntroComponent = () => {
   )
 }
 
-export default BlogIntroComponent
+export default IntroComponent

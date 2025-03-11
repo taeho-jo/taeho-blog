@@ -2,7 +2,7 @@ import { Github, Instagram, Mail, UserSearch } from 'lucide-react'
 
 import Link from 'next/link'
 
-const BlogSocialComponent = () => {
+const SocialLinkComponent = () => {
   return (
     <section className={'flex items-center justify-start pb-8 pt-4'}>
       {/*메일*/}
@@ -33,4 +33,4 @@ const BlogSocialComponent = () => {
   )
 }
 
-export default BlogSocialComponent
+export default SocialLinkComponent

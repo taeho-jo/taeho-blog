@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const BlogIntroComponent = () => {
+const MenuComponent = () => {
   return (
     <section className={''}>
       <div className={'mb-3'}>
@@ -11,8 +11,8 @@ const BlogIntroComponent = () => {
           }>
           깨작깨작
         </Link>
-        <span className={'text-xs opacity-65'}>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;공부하면서 배운 것들을 남겨두는 곳
+        <span className={'pl-6 text-xs opacity-65'}>
+          공부하면서 배운 것들을 남겨두는 곳
         </span>
       </div>
       <div className={'mb-3'}>
@@ -23,8 +23,8 @@ const BlogIntroComponent = () => {
           }>
           뚝딱뚝딱
         </Link>
-        <span className={'text-xs opacity-65'}>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개발하며 만든 것들을 모아 놓은 곳
+        <span className={'pl-6 text-xs opacity-65'}>
+          개발하며 만든 것들을 모아 놓은 곳
         </span>
       </div>
       <div className={'mb-3'}>
@@ -35,12 +35,12 @@ const BlogIntroComponent = () => {
           }>
           차곡차곡
         </Link>
-        <span className={'text-xs opacity-65'}>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;경험과 배움을 쌓아온 여정을 기록하는 곳
+        <span className={'pl-6 text-xs opacity-65'}>
+          경험과 배움을 쌓아온 여정을 기록하는 곳
         </span>
       </div>
     </section>
   )
 }
 
-export default BlogIntroComponent
+export default MenuComponent
