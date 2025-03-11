@@ -3,6 +3,7 @@ import { Noto_Sans_KR, Gowun_Batang } from 'next/font/google'
 import '../styles/globals.css'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
 import Footer from '@/components/Footer'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const notoSansFont = Noto_Sans_KR({
   subsets: ['latin'],
@@ -79,6 +80,7 @@ export default function RootLayout({
           <div className="flex min-h-screen w-full flex-col items-center">
             <main className="w-full max-w-screen-sm flex-1 px-4 pt-24 md:px-0 md:pt-40">
               {children}
+              <SpeedInsights />
             </main>
 
             <Footer />
