@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { Link as LinkIcon } from 'lucide-react'
 
 const SubNavbar = ({
-  title,
-  subTitle
+  title = '제목입니다',
+  subTitle = '부제목입니다.'
 }: {
   title: string
   subTitle: string

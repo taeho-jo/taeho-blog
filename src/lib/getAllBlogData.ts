@@ -24,8 +24,10 @@ export async function getAllBlogData() {
       }
     })
   )
-  return metadataList.sort(
-    (a, b) =>
-      new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
-  )
+  return metadataList.sort((a, b) => {
+    const dateA = a.publishDate ? new Date(a.publishDate) : new Date(0)
+    const dateB = b.publishDate ? new Date(b.publishDate) : new Date(0)
+    return dateB.getTime() - dateA.getTime()
+    // new Date(b.publishDate ? b.publishDate: '23.04.01').getTime() - new Date(a.publishDate).getTime()
+  })
 }
