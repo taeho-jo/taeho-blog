@@ -8,6 +8,8 @@ export async function getAllBlogData() {
 
   const files = fs.readdirSync(contentDir)
 
+  if (!files) return []
+
   const metadataList = await Promise.all(
     files.map(async filename => {
       const filePath = path.join(contentDir, filename)
