@@ -23,7 +23,7 @@ const SubNavbar = ({
         <Navbar />
       </div>
 
-      <div className={'mb-24 flex items-center justify-start'}>
+      <div className={'mb-12 flex items-center justify-start md:mb-24'}>
         <div
           className={
             'flex items-center justify-start transition-all duration-300 hover:text-highlight'

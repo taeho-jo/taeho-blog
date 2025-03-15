@@ -22,16 +22,18 @@ export default async function BlogContent({
         subTitle={`by 조태호 | ${formatDate(frontmatter.publishDate)}`}
       />
 
-      <div className="relative mb-14 h-64 w-full sm:h-96">
-        <Image
-          src={frontmatter.imgUrl}
-          alt={`${frontmatter.title} 포스터 이미지`}
-          fill
-          placeholder="blur"
-          blurDataURL={frontmatter.title}
-          className="object-cover"
-        />
-      </div>
+      {frontmatter.imgUrl && (
+        <div className="relative mb-14 h-64 w-full sm:h-96">
+          <Image
+            src={frontmatter.imgUrl}
+            alt={`${frontmatter.title} 포스터 이미지`}
+            fill
+            placeholder="blur"
+            blurDataURL={frontmatter.title}
+            className="object-cover"
+          />
+        </div>
+      )}
 
       <div className="prose dark:prose-invert">{content}</div>
     </>
