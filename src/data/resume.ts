@@ -17,7 +17,7 @@ export const resumeData = [
     title: '디비디랩',
     description: [
       '프론트엔드',
-      'Diby클라이원트 웹 / Diby 웹리포트 1.0 / 우쥬&Diby 통합어드민'
+      'Diby 클라이언트 웹 / Diby 웹리포트 1.0 / 우쥬&Diby 통합어드민'
     ]
   },
   {
