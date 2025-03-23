@@ -45,13 +45,6 @@ export const metadata: Metadata = {
     ],
     type: 'website'
   }
-  // twitter: {
-  //   card: 'summary_large_image',
-  //   title: '조각조각 | 기록이 모여 흔적이 되는 공간',
-  //   description:
-  //     '조각조각은 개발과 작업물을 기록하고, 쌓아가며 성장의 흔적을 남기는 공간! 부담 없이 들러서 개발자의 여정을 보고 가세요!',
-  //   images: ['/jogakjogak.png']
-  // }
 }
 
 export const viewport: Viewport = {
