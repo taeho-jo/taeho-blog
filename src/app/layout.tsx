@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   keywords:
     'React, JavaScript, TypeScript, Next.js, SEO, 웹 개발, 개발 블로그, 기술 블로그, 프로젝트 공유, 개발 기록',
   authors: [{ name: '조각조각', url: `${HOSTNAME}` }],
-  metadataBase: new URL('https://taeho-blog.vercel.app'),
+  metadataBase: new URL('https://jogak-jogak.vercel.app'),
   openGraph: {
     title: '조각조각 | 기록이 모여 흔적이 되는 공간',
     description:
