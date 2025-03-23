@@ -18,8 +18,10 @@ export default async function BlogContent({
   return (
     <>
       <SubNavbar
-        title={frontmatter.title}
-        subTitle={`by 조태호 | ${formatDate(frontmatter.publishDate)}`}
+        override={{
+          title: `${frontmatter.title}`,
+          subTitle: `${`by 조태호 | ${formatDate(frontmatter.publishDate)}`}`
+        }}
       />
 
       {frontmatter.imgUrl && (

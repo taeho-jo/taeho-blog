@@ -1,4 +1,4 @@
-export interface BlogMetadataType {
+export type BlogMetadataType = {
   title?: string
   description?: string
   publishDate?: string
@@ -6,7 +6,7 @@ export interface BlogMetadataType {
   slug?: string
 }
 
-export interface ProjectDataType {
+export type ProjectDataType = {
   title?: string
   date?: string
   slug?: string
