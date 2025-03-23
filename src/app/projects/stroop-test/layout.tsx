@@ -12,7 +12,6 @@ export default function StroopLayout({ mode }: { mode: ReactNode }) {
     <>
       <SubNavbar slug="stroop-test" />
       <div className="p-4">
-        {/*{children}*/}
         {/* Parallel Routes 영역 (intro, fixed, timed) */}
         {mode}
       </div>
