@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.redirect(authUrl.toString())
   }
   
-  // 토큰 교환 및 CMS로 리다이렉트
+  // 토큰 교환 및 postMessage로 CMS에 전달
   try {
     const tokenResponse = await fetch('https://github.com/login/oauth/access_token', {
       method: 'POST',
@@ -39,12 +39,38 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: tokenData.error }, { status: 400 })
     }
 
-    // CMS로 토큰과 함께 리다이렉트
-    const cmsUrl = new URL('/admin/index.html', request.nextUrl.origin)
-    cmsUrl.hash = '/collections/posts'
-    cmsUrl.searchParams.set('token', tokenData.access_token)
+    // Decap CMS로 토큰 전달하는 HTML
+    const html = `<!DOCTYPE html>
+<html>
+<head>
+  <title>Authentication Success</title>
+</head>
+<body>
+  <script>
+    const authData = {
+      token: '${tokenData.access_token}',
+      provider: 'github'
+    };
     
-    return NextResponse.redirect(cmsUrl.toString())
+    // 부모 창(CMS)에 메시지 전달
+    if (window.opener) {
+      window.opener.postMessage(
+        'authorization:github:success:' + JSON.stringify(authData), 
+        window.location.origin
+      );
+      window.close();
+    } else {
+      // 직접 접근시 CMS로 리다이렉트
+      window.location.href = '/admin/index.html#/collections/posts';
+    }
+  </script>
+  <p>Authentication successful. Redirecting...</p>
+</body>
+</html>`
+    
+    return new NextResponse(html, {
+      headers: { 'Content-Type': 'text/html' }
+    })
     
   } catch (error) {
     console.error('OAuth error:', error)

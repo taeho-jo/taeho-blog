@@ -2,6 +2,7 @@ backend:
   name: github
   repo: taeho-jo/taeho-blog
   branch: main
+  base_url: https://jogak-jogak.vercel.app
   auth_endpoint: /api/auth
 #  branch: feature/install-cms
 
