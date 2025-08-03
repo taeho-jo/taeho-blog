@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: taeho-jo/taeho-blog # 당신의 GitHub ID와 리포지토리 이름으로 변경
+  branch: feature/install-cms # 블로그가 배포될 브랜치 (일반적으로 main)
+
+local_backend:
+  url: http://localhost:8081/api/v1
+
+media_folder: "public/contents" # 이미지가 저장될 경로 (Next.js public 폴더 기준)
+public_folder: "/contents" # 블로그에서 이미지를 참조할 공용 경로
+
+collections:
+  - name: "posts" # 콜렉션 이름 (코드에서 참조)
+    label: "게시물" # 관리자 UI에 표시될 이름
+    folder: "src/contents" # MDX 파일이 저장될 실제 경로
+    create: true # 새 게시물 생성 허용
+    extension: "mdx" # 파일 확장자 지정
+    format: "frontmatter" # 파일 포맷 지정
+    slug: "{{fields.slug}}" # 'slug' 필드의 값을 파일명으로 사용
+    identifier_field: "slug" # 'slug' 필드를 고유 식별자로 사용
+    fields: # MDX 파일의 frontmatter 필드 정의
+      - {label: "TITLE", name: "title", widget: "string", required: true}
+      - {label: "DESCRIPTION", name: "description", widget: "string", required: false}
+      - {label: "DATE", name: "publishDate", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss",picker_utc: false, time_format: "HH:mm:ss", date_format: "YYYY-MM-DD", required: true}
+      - {label: "URL", name: "slug", widget: "string", required: true }
+      - {label: "IMAGE", name: "imgUrl", widget: "select", required: false, options: ["", "/contents/js.png", "/contents/ts.png", "/contents/next.png", "/contents/node.png", "/contents/react.png", "/contents/git.png", "/contents/error.png", "/contents/db.png", "/contents/jogak-jogak.png", "/contents/algorithm.png", "/contents/til.png"]}
+      - {label: "CONTENT", name: "body", widget: "markdown"} # MDX 본문
+

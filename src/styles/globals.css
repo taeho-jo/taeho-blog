@@ -342,3 +342,31 @@ html:not(.dark) .token.variable {
   opacity: 1;
 }
 
+/* ─────────────── 블로그 콘텐츠 이미지 스타일 ─────────────── */
+/* prose 클래스 내의 모든 이미지를 100% 너비로 설정 */
+.prose img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* 다크모드에서 이미지 스타일 */
+.dark .prose img {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* 이미지에 캡션이 있을 경우 스타일링 */
+.prose figcaption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.dark .prose figcaption {
+  color: #9ca3af;
+}
+

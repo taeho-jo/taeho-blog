@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "cms:dev": "npx decap-server"
   },
   "dependencies": {
     "@mdx-js/react": "^3.1.0",
@@ -20,7 +22,7 @@
     "dayjs": "^1.11.13",
     "framer-motion": "^12.5.0",
     "lucide-react": "^0.477.0",
-    "next": "15.1.7",
+    "next": "15.3.3",
     "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.4.4",
     "react": "^19.0.0",
