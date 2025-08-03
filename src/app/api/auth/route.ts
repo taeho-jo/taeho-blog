@@ -4,11 +4,6 @@ export async function GET() {
   // 환경 변수 확인
   const clientId = process.env.OAUTH_CLIENT_ID
 
-  const host =
-    process.env.NODE_ENV !== 'production'
-      ? 'http://localhost:3000'
-      : process.env.VERCEL_URL
-
   if (!clientId) {
     console.error('❌ OAUTH_CLIENT_ID 환경 변수가 설정되지 않았습니다.')
     return NextResponse.json(
@@ -18,7 +13,7 @@ export async function GET() {
   }
 
   // OAuth 파라미터 설정
-  const redirectUri = `${host}/api/auth/callback`
+  const redirectUri = `https://jogak-jogak.vercel.app/api/auth/callback`
   const scope = 'repo, user, email'
 
   // GitHub OAuth URL 생성
