@@ -21,7 +21,7 @@ collections:
     fields:
       - {label: "TITLE", name: "title", widget: "string", required: true}
       - {label: "DESCRIPTION", name: "description", widget: "string", required: false}
-      - {label: "DATE", name: "publishDate", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss",picker_utc: false, time_format: "HH:mm:ss", date_format: "YYYY-MM-DD", required: true}
+      - {label: "DATE", name: "publishDate", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ",picker_utc: false, time_format: "HH:mm:ss", date_format: "YYYY-MM-DD", required: true}
       - {label: "URL", name: "slug", widget: "string", required: true }
       - {label: "IMAGE", name: "imgUrl", widget: "select", required: false, options: ["", "/contents/js.png", "/contents/ts.png", "/contents/next.png", "/contents/node.png", "/contents/react.png", "/contents/git.png", "/contents/error.png", "/contents/db.png", "/contents/jogak-jogak.png", "/contents/algorithm.png", "/contents/til.png"]}
       - {label: "CONTENT", name: "body", widget: "markdown"}
