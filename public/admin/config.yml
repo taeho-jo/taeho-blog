@@ -19,10 +19,10 @@ collections:
     slug: "{{fields.slug}}" # 'slug' 필드의 값을 파일명으로 사용
     identifier_field: "slug" # 'slug' 필드를 고유 식별자로 사용
     fields: # MDX 파일의 frontmatter 필드 정의
-      - {label: "제목", name: "title", widget: "string", required: true}
-      - {label: "설명", name: "description", widget: "string", required: false}
-      - {label: "게시일", name: "publishDate", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss",picker_utc: false, time_format: "HH:mm:ss", date_format: "YYYY-MM-DD", required: true}
+      - {label: "TITLE", name: "title", widget: "string", required: true}
+      - {label: "DESCRIPTION", name: "description", widget: "string", required: false}
+      - {label: "DATE", name: "publishDate", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss",picker_utc: false, time_format: "HH:mm:ss", date_format: "YYYY-MM-DD", required: true}
       - {label: "URL", name: "slug", widget: "string", required: true }
-      - {label: "메인이미지", name: "imgUrl", widget: "select", required: false, options: ["", "/contents/js.png", "/contents/ts.png", "/contents/next.png", "/contents/node.png", "/contents/react.png", "/contents/git.png", "/contents/error.png", "/contents/db.png", "/contents/jogak-jogak.png", "/contents/algorithm.png", "/contents/til.png"]}
-      - {label: "본문", name: "body", widget: "markdown"} # MDX 본문
+      - {label: "IMAGE", name: "imgUrl", widget: "select", required: false, options: ["", "/contents/js.png", "/contents/ts.png", "/contents/next.png", "/contents/node.png", "/contents/react.png", "/contents/git.png", "/contents/error.png", "/contents/db.png", "/contents/jogak-jogak.png", "/contents/algorithm.png", "/contents/til.png"]}
+      - {label: "CONTENT", name: "body", widget: "markdown"} # MDX 본문
 
