@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: taeho-jo/taeho-blog # 당신의 GitHub ID와 리포지토리 이름으로 변경
   branch: main
 #  branch: feature/install-cms
