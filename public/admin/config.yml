@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: taeho-jo/taeho-blog # 당신의 GitHub ID와 리포지토리 이름으로 변경
+  branch: main # 블로그가 배포될 브랜치 (일반적으로 main)
+
+local_backend: true
+
+media_folder: "public/contents" # 이미지가 저장될 경로 (Next.js public 폴더 기준)
+public_folder: "/contents" # 블로그에서 이미지를 참조할 공용 경로
+
+collections:
+  - name: "posts" # 콜렉션 이름 (코드에서 참조)
+    label: "게시물" # 관리자 UI에 표시될 이름
+    folder: "src/contents" # MDX 파일이 저장될 실제 경로
+    create: true # 새 게시물 생성 허용
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # 파일명 패턴 (예: 2024-08-01-my-post.mdx)
+    fields: # MDX 파일의 frontmatter 필드 정의
+      - {label: "제목", name: "title", widget: "string", required: true}
+      - {label: "설명", name: "description", widget: "string", required: false}
+      - {label: "게시일", name: "publishDate", widget: "datetime", format: "YYYY-MM-DD", required: true}
+      - {label: "메인이미지", name: "imgUrl", widget: "string", required: false}
+      - {label: "본문", name: "body", widget: "markdown"} # MDX 본문
