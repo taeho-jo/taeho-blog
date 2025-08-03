@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
     "cms:dev": "npx decap-server"
   },
   "dependencies": {
