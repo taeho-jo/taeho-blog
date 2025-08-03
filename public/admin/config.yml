@@ -2,8 +2,8 @@ backend:
   name: github
   repo: taeho-jo/taeho-blog
   branch: main
-  base_url: https://jogak-jogak.vercel.app
-  auth_endpoint: api/auth
+  base_url: https://decap-oauth-provider.herokuapp.com
+  auth_endpoint: auth
 #  branch: feature/install-cms
 
 #local_backend:
