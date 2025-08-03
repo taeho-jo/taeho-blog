@@ -1,7 +1,8 @@
 backend:
-  name: git-gateway
-  repo: taeho-jo/taeho-blog # 당신의 GitHub ID와 리포지토리 이름으로 변경
+  name: github
+  repo: taeho-jo/taeho-blog
   branch: main
+  auth_endpoint: https://decap-oauth-provider.herokuapp.com/auth
 #  branch: feature/install-cms
 
 #local_backend:
