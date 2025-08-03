@@ -5,9 +5,19 @@ import rehypePrism from 'rehype-prism-plus'
 
 const nextConfig: NextConfig = {
   /* config options here */
-  output: 'export',
   // Configure `pageExtensions` to include markdown and MDX files
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx']
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  
+  // /admin 경로를 /admin/index.html로 리다이렉트  
+  async redirects() {
+    return [
+      {
+        source: '/admin',
+        destination: '/admin/index.html',
+        permanent: false
+      }
+    ]
+  }
   // Optionally, add any other Next.js config below
 }
 const withMDX = createMDX({

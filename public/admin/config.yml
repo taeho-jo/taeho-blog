@@ -3,7 +3,8 @@ backend:
   repo: taeho-jo/taeho-blog # 당신의 GitHub ID와 리포지토리 이름으로 변경
   branch: feature/install-cms # 블로그가 배포될 브랜치 (일반적으로 main)
 
-local_backend: true
+local_backend:
+  url: http://localhost:8081/api/v1
 
 media_folder: "public/contents" # 이미지가 저장될 경로 (Next.js public 폴더 기준)
 public_folder: "/contents" # 블로그에서 이미지를 참조할 공용 경로
@@ -20,8 +21,8 @@ collections:
     fields: # MDX 파일의 frontmatter 필드 정의
       - {label: "제목", name: "title", widget: "string", required: true}
       - {label: "설명", name: "description", widget: "string", required: false}
-      - {label: "게시일", name: "publishDate", widget: "datetime", format: "YYYY-MM-DD", required: true}
+      - {label: "게시일", name: "publishDate", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss",picker_utc: false, time_format: "HH:mm:ss", date_format: "YYYY-MM-DD", required: true}
       - {label: "URL", name: "slug", widget: "string", required: true }
-      - {label: "메인이미지", name: "imgUrl", widget: "string", required: false}
+      - {label: "메인이미지", name: "imgUrl", widget: "select", required: false, options: ["", "/contents/js.png", "/contents/ts.png", "/contents/next.png", "/contents/node.png", "/contents/react.png", "/contents/git.png", "/contents/error.png", "/contents/db.png", "/contents/jogak-jogak.png", "/contents/algorithm.png", "/contents/til.png"]}
       - {label: "본문", name: "body", widget: "markdown"} # MDX 본문
 
