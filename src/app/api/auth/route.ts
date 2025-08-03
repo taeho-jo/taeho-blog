@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.redirect(authUrl.toString())
   }
   
-  // 토큰 교환 및 응답
+  // 토큰 교환 및 CMS로 리다이렉트
   try {
     const tokenResponse = await fetch('https://github.com/login/oauth/access_token', {
       method: 'POST',
@@ -39,14 +39,15 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: tokenData.error }, { status: 400 })
     }
 
-    // Decap CMS가 기대하는 응답 형식
-    return NextResponse.json({
-      token: tokenData.access_token,
-      provider: 'github'
-    })
+    // CMS로 토큰과 함께 리다이렉트
+    const cmsUrl = new URL('/admin/index.html', request.nextUrl.origin)
+    cmsUrl.hash = '/collections/posts'
+    cmsUrl.searchParams.set('token', tokenData.access_token)
+    
+    return NextResponse.redirect(cmsUrl.toString())
     
   } catch (error) {
     console.error('OAuth error:', error)
-    return NextResponse.json({ error: 'Authentication failed' }, { status: 500 })
+    return NextResponse.redirect(`${request.nextUrl.origin}/admin?error=auth_failed`)
   }
 }
