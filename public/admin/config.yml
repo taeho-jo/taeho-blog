@@ -17,6 +17,7 @@ collections:
     format: "frontmatter"
     slug: "{{fields.slug}}"
     identifier_field: "slug"
+    summary: "{{fields.title}}"
     fields:
       - {label: "TITLE", name: "title", widget: "string", required: true}
       - {label: "DESCRIPTION", name: "description", widget: "string", required: false}
