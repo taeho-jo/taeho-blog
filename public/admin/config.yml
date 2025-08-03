@@ -2,7 +2,7 @@ backend:
   name: github
   repo: taeho-jo/taeho-blog
   branch: main
-  auth_endpoint: https://decap-oauth-provider.herokuapp.com/auth
+  auth_endpoint: /api/auth
 #  branch: feature/install-cms
 
 #local_backend:
