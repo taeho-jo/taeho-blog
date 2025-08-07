@@ -5,6 +5,7 @@ import { getPostSlug } from '@/lib/getPostSlug'
 import { getContentData } from '@/lib/getContentData'
 import formatDate from '@/utils/formatDate'
 import { generateSeoMetadata } from '@/utils/setMeta'
+import Giscus from '@/components/ui/giscus'
 
 // ✅ 페이지 컴포넌트 (params는 Promise ❌, 그냥 객체로)
 export default async function BlogContent({
@@ -38,6 +39,8 @@ export default async function BlogContent({
       )}
 
       <div className="prose dark:prose-invert">{content}</div>
+
+      <Giscus />
     </>
   )
 }

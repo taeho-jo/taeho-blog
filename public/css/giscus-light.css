@@ -1,0 +1,197 @@
+/*
+ * Giscus 공식 'noborder_light' 테마를 기반으로,
+ * 블로그 스타일에 맞춰 수정한 커스텀 테마입니다.
+ * 각 영역에 주석을 추가하여 직접 수정하기 쉽도록 만들었습니다.
+ */
+
+/* --- 폰트 설정 --- */
+/* 블로그 댓글창에서 사용할 폰트를 Google Fonts에서 가져옵니다. */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
+
+
+main {
+  /*
+   * ===================================================================
+   * 🎨 핵심 디자인 변수 영역 🎨
+   * ===================================================================
+   * 이 안의 값들을 수정해서 테마 전체를 손쉽게 바꿀 수 있습니다.
+   * Giscus 댓글창의 모든 스타일은 대부분 이곳의 변수들을 따라갑니다.
+   */
+
+  /* --- 🖋️ 1. 기본 폰트 및 테두리 --- */
+  font-family: 'Gowun Batang', serif; /* 댓글창의 기본 글꼴입니다. */
+  --giscus-border-radius: 0.2rem; /* 버튼, 입력창 등의 둥근 모서리 값입니다. */
+
+  /* --- 🖌️ 2. 기본 색상: 배경 및 글자 --- */
+  --bg-default: 248, 249, 250; /* 전체 배경색의 RGB 값입니다. (#F8F9FA) */
+  --color-fg-default: #1F2937; /* 기본 글자색입니다. */
+  --color-fg-muted: #6b7280; /* "3일 전" 등 보조적인 회색 글자색입니다. */
+  --color-fg-subtle: #9ca3af; /* 더 연한 회색 글자색입니다. */
+
+  /* --- 🔘 3. 버튼 색상 --- */
+  /* "댓글 등록"과 같은 가장 중요한 버튼의 색상을 담당합니다. */
+  --primary-default: 209, 156, 151; /* 버튼 배경색의 RGB 값입니다. (#D19C97) */
+  --color-btn-primary-text: #FFFFFF; /* 버튼 안의 글자색입니다. */
+
+  /* "미리보기" 탭과 같은 일반 버튼의 색상입니다. */
+  --color-btn-text: #24292f;
+  --color-btn-bg: rgba(var(--bg-default), 1);
+  --color-btn-hover-bg: rgba(209, 213, 219, 0.5); /* 일반 버튼에 마우스를 올렸을 때 배경색 */
+
+  /* --- 📝 4. 입력창 및 테두리 색상 --- */
+  --color-canvas-subtle: rgba(229, 231, 235, 0.5); /* 댓글 입력창의 배경색입니다. (#E5E7EB) */
+  --color-border-default: rgba(209, 213, 219, 0.3); /* 댓글과 댓글 사이의 구분선 등 일반 테두리 색입니다. (#D1D5DB) */
+  --color-border-muted: rgba(209, 213, 219, 0.5); /* 더 연한 테두리 색입니다. */
+
+  /* --- ✨ 5. 링크 및 상태 색상 --- */
+  /* 링크나 특정 상태(성공, 위험 등)를 나타내는 색상입니다. */
+  --color-accent-fg: rgba(var(--primary-default), 0.85); /* 일반 링크 색상입니다. */
+  --color-success-fg: #1a7f37; /* 성공 상태를 나타내는 초록색 계열입니다. */
+  --color-danger-fg: #d1242f; /* 삭제 등 위험 상태를 나타내는 붉은색 계열입니다. */
+
+
+  /*
+   * ===================================================================
+   * ⚙️ 세부 디자인 변수 영역 ⚙️
+   * ===================================================================
+   * 아래는 Giscus가 사용하는 모든 세부 변수들입니다.
+   * 특별한 경우가 아니면 위 '핵심 변수'들만 수정해도 충분합니다.
+   */
+
+  /* --- 코드 블록 문법 강조(Syntax Highlighting) 색상 --- */
+  /* 댓글 안에 코드 블록을 넣었을 때, 코드 종류에 따라 표시되는 색상들입니다. */
+  --color-prettylights-syntax-comment: #6e7781;
+  --color-prettylights-syntax-constant: #0550ae;
+  --color-prettylights-syntax-entity: #8250df;
+  --color-prettylights-syntax-storage-modifier-import: #24292f;
+  --color-prettylights-syntax-entity-tag: #116329;
+  --color-prettylights-syntax-keyword: #cf222e;
+  --color-prettylights-syntax-string: #0a3069;
+  --color-prettylights-syntax-variable: #953800;
+
+  /* --- 기타 세부 변수 (대부분 자동 계산됨) --- */
+  --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+  --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+  --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+  --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+  --color-prettylights-syntax-carriage-return-bg: #cf222e;
+  --color-prettylights-syntax-string-regexp: #116329;
+  --color-prettylights-syntax-markup-list: #3b2300;
+  --color-prettylights-syntax-markup-heading: #0550ae;
+  --color-prettylights-syntax-markup-italic: #24292f;
+  --color-prettylights-syntax-markup-bold: #24292f;
+  --color-prettylights-syntax-markup-deleted-text: #82071e;
+  --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+  --color-prettylights-syntax-markup-inserted-text: #116329;
+  --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+  --color-prettylights-syntax-markup-changed-text: #953800;
+  --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+  --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+  --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+  --color-prettylights-syntax-meta-diff-range: #8250df;
+  --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+  --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+  --color-btn-border: rgba(var(--bg-default), 1);
+  --color-btn-shadow: 0 1px 0 rgba(var(--bg-default), 1);
+  --color-btn-inset-shadow: inset 0 1px 0 rgba(var(--bg-default), 1);
+  --color-btn-hover-border: rgba(var(--bg-default), 0.5);
+  --color-btn-active-bg: rgba(var(--primary-default), 0.2);
+  --color-btn-active-border: rgba(var(--primary-default), 1);
+  --color-btn-selected-bg: rgba(var(--primary-default), 0.15);
+  --color-btn-primary-bg: rgba(var(--primary-default), 1);
+  --color-btn-primary-border: rgba(var(--primary-default), 1);
+  --color-btn-primary-hover-bg: rgba(var(--primary-default), 0.9);
+  --color-btn-primary-hover-border: rgba(var(--primary-default), 0.75);
+  --color-btn-primary-selected-bg: rgba(var(--primary-default), 1);
+  --color-btn-primary-selected-shadow: inset 0 1px 0 #002d1133;
+  --color-btn-primary-disabled-bg: rgba(var(--primary-default), 0.5);
+  --color-btn-primary-disabled-border: rgba(var(--primary-default), 0.5);
+  --color-action-list-item-default-hover-bg: #d0d7de52;
+  --color-segmented-control-bg: #eaeef2;
+  --color-segmented-control-button-bg: #fff;
+  --color-segmented-control-button-selected-border: rgba(var(--bg-default), 0.85);
+  --color-canvas-default: #fff;
+  --color-canvas-overlay: #fff;
+  --color-canvas-inset: rgba(var(--bg-default), 0.85);
+  --color-neutral-muted: #afb8c133;
+  --color-accent-emphasis: rgba(var(--primary-default), 0.95);
+  --color-accent-muted: rgba(var(--primary-default), 0.4);
+  --color-accent-subtle: rgba(var(--primary-default), 0.1);
+  --color-attention-fg: #9a6700;
+  --color-attention-muted: #d4a72c66;
+  --color-attention-subtle: #fff8c5;
+  --color-danger-muted: #ff818266;
+  --color-danger-subtle: #ffebe9;
+  --color-primer-shadow-inset: 0 1px 0 rgba(var(--bg-default), 1), inset 0 1px 0 rgba(var(--bg-default), 1);
+  --color-scale-gray-1: #eaeef2;
+  --color-scale-blue-1: #10b98126;
+  --color-social-reaction-bg-hover: var(--color-scale-gray-1);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1)
+}
+
+/* --- Giscus 기본 이미지 설정 (수정 불필요) --- */
+main .pagination-loader-container {
+  background-image: url(https://github.com/images/modules/pulls/progressive-disclosure-line.svg)
+}
+main .gsc-loading-image {
+  background-image: url(https://github.githubassets.com/images/mona-loading-default.gif)
+}
+main {
+  padding-top: 4rem;
+}
+main button {
+  border: none !important;
+}
+main a {
+  font-size: 14px;
+}
+.gsc-comment:not(.gsc-reply-box) .gsc-replies {
+  border-radius: unset
+}
+
+#__next > main > div > div.gsc-comments > div.gsc-header > div > em {
+  display: none;
+}
+/*
+ * ===================================================================
+ * 💅 세부 스타일 조정 영역 💅
+ * ===================================================================
+ * 변수만으로 제어하기 어려운 부분들을 직접 지정(override)합니다.
+ */
+
+.gsc-comment-box:not(.gsc-comment-box-is-reply) {
+  border:none !important;
+}
+
+/* 입력창 폰트를 Fira Code로 지정합니다. */
+.gsc-input {
+  font-family: 'Fira Code', monospace !important;
+}
+
+/* 모든 버튼의 폰트, 둥근 모서리를 지정합니다. */
+.gsc-button {
+  border-radius: var(--giscus-border-radius) !important;
+  font-family: 'Noto Sans KR', sans-serif !important;
+  font-weight: 500 !important;
+}
+
+/* 댓글 작성자, 시간 등 헤더의 폰트와 크기를 지정합니다. */
+.gsc-comment-header {
+  font-family: 'Noto Sans KR', sans-serif !important;
+  font-size: 0.875rem !important;
+}
+
+/* 각 댓글을 감싸는 박스에 그림자, 둥근 모서리, 여백 등을 추가하여 깔끔하게 만듭니다. */
+.gsc-comment {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  border-radius: var(--giscus-border-radius) !important;
+  padding: 1rem;
+  border: 1px solid var(--color-border-default);
+}
+.gsc-reactions-menu summary {
+  width: 18px !important;
+  height: 18px !important;
+}
