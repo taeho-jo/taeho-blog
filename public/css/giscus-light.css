@@ -185,7 +185,7 @@ main strong {
   border-radius: var(--giscus-border-radius) !important;
   padding: 1rem;
   border: 1px solid var(--color-border-default);
-  background-color: rgba(229, 231, 235, 0.5);
+  background-color: #fff;
 }
 .gsc-comment .gsc-header .gsc-left-header .color-text-secondary.text-sm {
   display: none;

@@ -16,7 +16,10 @@ export default function Giscus() {
   const ref = useRef<HTMLDivElement>(null)
   const { resolvedTheme } = useTheme()
 
-  const HOST = 'https://jogak-jogak.vercel.app'
+  const HOST =
+    process.env.NODE_ENV === 'production'
+      ? 'https://jogak-jogak.vercel.app'
+      : 'http://localhost:3000'
   const REPO_ID = process.env.NEXT_PUBLIC_GISCUS_REPO_ID
   const CATEGORY_ID = process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID
 
