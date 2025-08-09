@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/dropdown-menu'
 
 export default function DarkModeToggle() {
-  const { theme, setTheme } = useTheme()
+  const { setTheme } = useTheme()
 
   const handleThemeChange = (mode: string) => {
     setTheme(mode)
