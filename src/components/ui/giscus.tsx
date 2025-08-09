@@ -37,16 +37,12 @@ export default function Giscus() {
     script.setAttribute('data-repo-id', 'R_kgDOOEm4CQ')
     script.setAttribute('data-category', 'General')
     script.setAttribute('data-category-id', 'DIC_kwDOOEm4Cc4Ct5Yh')
-
     script.setAttribute('data-mapping', 'pathname')
     script.setAttribute('data-strict', '0')
     script.setAttribute('data-reactions-enabled', '1')
     script.setAttribute('data-emit-metadata', '0')
     script.setAttribute('data-input-position', 'top')
     script.setAttribute('data-lang', 'ko')
-    // script.setAttribute('data-loading', 'lazy')
-
-    // 최초 렌더링 시의 테마를 설정합니다.
     script.setAttribute('data-theme', giscusTheme)
 
     ref.current.appendChild(script)
