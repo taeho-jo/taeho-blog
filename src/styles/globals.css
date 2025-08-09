@@ -85,6 +85,11 @@ body {
 }
 
 /* ─────────────── 코드 타이틀 공통 ─────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 .rehype-code-title {
   padding: 0.7rem 1rem;
   font-size: 0.75rem;
