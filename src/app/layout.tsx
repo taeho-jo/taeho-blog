@@ -73,7 +73,7 @@ export default function RootLayout({
           enableSystem>
           {/*<Navbar />*/}
           <div className="flex min-h-screen w-full flex-col items-center">
-            <main className="w-full max-w-screen-sm flex-1 px-4 pb-16 pt-16 md:px-0">
+            <main className="w-full max-w-screen-sm flex-1 px-4 pt-5 md:px-0 md:pt-16">
               {children}
               <SpeedInsights />
             </main>

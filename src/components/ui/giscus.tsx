@@ -16,11 +16,15 @@ export default function Giscus() {
   const ref = useRef<HTMLDivElement>(null)
   const { resolvedTheme } = useTheme()
 
+  const HOST = process.env.VERCEL_URL
+  const REPO_ID = process.env.NEXT_PUBLIC_GISCUS_REPO_ID
+  const CATEGORY_ID = process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID
+
   // 현재 테마를 Giscus가 알아들을 수 있는 값으로 변환합니다.
   const giscusTheme =
     resolvedTheme === 'dark'
-      ? 'http://localhost:3000/css/giscus-dark.css'
-      : 'http://localhost:3000/css/giscus-light.css'
+      ? `${HOST}/css/giscus-dark.css`
+      : `${HOST}/css/giscus-light.css`
 
   // 1️⃣ [최초 1회 실행] Giscus 스크립트를 불러와서 댓글창을 렌더링합니다.
   useEffect(() => {
@@ -34,9 +38,9 @@ export default function Giscus() {
 
     // ✅ 아래 값들은 본인의 Giscus 설정값으로 유지해주세요.
     script.setAttribute('data-repo', 'taeho-jo/taeho-blog')
-    script.setAttribute('data-repo-id', 'R_kgDOOEm4CQ')
+    script.setAttribute('data-repo-id', `${REPO_ID}`)
     script.setAttribute('data-category', 'General')
-    script.setAttribute('data-category-id', 'DIC_kwDOOEm4Cc4Ct5Yh')
+    script.setAttribute('data-category-id', `${CATEGORY_ID}`)
     script.setAttribute('data-mapping', 'pathname')
     script.setAttribute('data-strict', '0')
     script.setAttribute('data-reactions-enabled', '1')
