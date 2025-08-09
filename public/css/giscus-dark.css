@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
+
+main {
+  font-family: 'Gowun Batang', serif;
+  --giscus-border-radius: 0.5rem;
+
+  --bg-default: 17, 24, 39;
+  --color-fg-default: #E5E7EB;
+  --color-fg-muted: #9CA3AF;
+
+  --primary-default: 209, 156, 151;
+  --color-btn-primary-text: #1F2937;
+
+  --color-canvas-subtle: rgba(30, 41, 59, 0.9);
+  --color-border-default: rgba(55, 65, 81, 1);
+
+  --color-fg-subtle: #4d5561;
+  --color-prettylights-syntax-comment: #8b949e;
+  --color-prettylights-syntax-constant: #79c0ff;
+  --color-prettylights-syntax-entity: #d2a8ff;
+  --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+  --color-prettylights-syntax-entity-tag: #7ee787;
+  --color-prettylights-syntax-keyword: #ff7b72;
+  --color-prettylights-syntax-string: #a5d6ff;
+  --color-prettylights-syntax-variable: #ffa657;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+  --color-prettylights-syntax-carriage-return-bg: #b62324;
+  --color-prettylights-syntax-string-regexp: #7ee787;
+  --color-prettylights-syntax-markup-list: #f2cc60;
+  --color-prettylights-syntax-markup-heading: #1f6feb;
+  --color-prettylights-syntax-markup-italic: #c9d1d9;
+  --color-prettylights-syntax-markup-bold: #c9d1d9;
+  --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+  --color-prettylights-syntax-markup-deleted-bg: #67060c;
+  --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+  --color-prettylights-syntax-markup-inserted-bg: #033a16;
+  --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+  --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+  --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+  --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+  --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+  --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+  --color-btn-text: #c9d1d9;
+  --color-btn-bg: #21262d;
+  --color-btn-border: #30363d;
+  --color-btn-shadow: 0 0 transparent;
+  --color-btn-inset-shadow: 0 0 transparent;
+  --color-btn-hover-bg: #30363d;
+  --color-btn-hover-border: #8b949e;
+  --color-btn-active-bg: #282e33;
+  --color-btn-active-border: #6e7681;
+  --color-btn-selected-bg: #161b22;
+  --color-btn-primary-bg: rgba(var(--primary-default), 1);
+  --color-btn-primary-border: rgba(var(--primary-default), 1);
+  --color-btn-primary-hover-bg: rgba(var(--primary-default), 0.9);
+  --color-btn-primary-hover-border: rgba(var(--primary-default), 0.9);
+  --color-btn-primary-selected-bg: rgba(var(--primary-default), 1);
+  --color-btn-primary-selected-shadow: 0 0 transparent;
+  --color-btn-primary-disabled-text: #c9d1d980;
+  --color-btn-primary-disabled-bg: rgba(var(--primary-default), 0.5);
+  --color-btn-primary-disabled-border: rgba(var(--primary-default), 0.5);
+  --color-action-list-item-default-hover-bg: #161b22;
+  --color-segmented-control-bg: #161b22;
+  --color-segmented-control-button-bg: #0d1117;
+  --color-segmented-control-button-selected-border: #6e7681;
+  --color-canvas-default: #0d1117;
+  --color-canvas-overlay: #161b22;
+  --color-canvas-inset: #0d1117;
+  --color-neutral-muted: #6e768166;
+  --color-accent-fg: #58a6ff;
+  --color-accent-emphasis: #1f6feb;
+  --color-accent-muted: #388bfd66;
+  --color-accent-subtle: #388bfd1f;
+  --color-success-fg: #3fb950;
+  --color-attention-fg: #d29922;
+  --color-attention-muted: #bb800966;
+  --color-attention-subtle: #bb800926;
+  --color-danger-fg: #f85149;
+  --color-danger-muted: #e5534b66;
+  --color-danger-subtle: #e5534b1f;
+  --color-primer-shadow-inset: 0 0 transparent;
+  --color-scale-gray-7: #21262d;
+  --color-scale-blue-8: #0c2d6b;
+  --color-social-reaction-bg-hover: var(--color-scale-gray-7);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8)
+}
+
+main .pagination-loader-container {
+  background-image: url(https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg)
+}
+
+main .gsc-loading-image {
+  background-image: url(https://github.githubassets.com/images/mona-loading-dark.gif)
+}
+main {
+  padding-top: 4rem;
+}
+main button, main div {
+  border: none !important;
+}
+main a,
+main button,
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6,
+main p,
+main span,
+main strong {
+  color: var(--color-fg-default) !important;
+  font-size: 14px;
+}
+.gsc-comment:not(.gsc-reply-box) .gsc-replies {
+  border-radius: unset
+}
+
+#__next > main > div > div.gsc-comments > div.gsc-header > div > em {
+  display: none;
+}
+.gsc-comment-box:not(.gsc-comment-box-is-reply) {
+  border:none !important;
+}
+
+.gsc-button {
+  border-radius: var(--giscus-border-radius) !important;
+  font-weight: 500 !important;
+}
+.gsc-comment-header {
+  font-size: 0.875rem !important;
+}
+.gsc-comment {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.4);
+  border-radius: var(--giscus-border-radius) !important;
+  padding: 1rem;
+  border: 1px solid var(--color-border-default);
+  background-color: #1a2233;
+}
+.gsc-comment .gsc-header .gsc-left-header .color-text-secondary.text-sm {
+  display: none;
+}
+.gsc-reactions-menu summary {
+  width: 18px !important;
+  height: 18px !important;
+}
