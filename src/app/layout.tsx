@@ -65,15 +65,15 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`min-h-[100svh] w-full min-w-[320px] ${gowonFont.className} ${notoSansFont.className} antialiased`}>
+        className={`min-h-[100dvh] w-full min-w-[320px] ${gowonFont.className} ${notoSansFont.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           disableTransitionOnChange
           enableSystem>
           {/*<Navbar />*/}
-          <div className="flex min-h-screen w-full flex-col items-center">
-            <main className="w-full max-w-screen-sm flex-1 px-4 pt-5 md:px-0 md:pt-16">
+          <div className="flex min-h-[100dvh] w-full flex-col items-center">
+            <main className="box-border w-full max-w-screen-sm flex-1 px-4 pt-5 md:px-0 md:pt-16">
               {children}
               <SpeedInsights />
             </main>
